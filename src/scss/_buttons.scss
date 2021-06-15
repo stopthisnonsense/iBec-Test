@@ -1,0 +1,68 @@
+.btn {
+	text-decoration: none;
+	border-radius: 1rem;
+	padding: 1rem;
+	position: relative;
+	overflow: hidden;
+	min-width: 55px;
+	text-align: center;
+	cursor: pointer;
+
+	@include breakpoint($mobile) {
+		min-width: 75px;
+	}
+	&::before {
+		transform: scaleX(0);
+		transform-origin: bottom right;
+		display: block;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		inset: 0 0 0 0;
+		background: transparentize($white, 0.5);
+		// z-index: -1;
+		transition: transform 0.3s ease;
+	}
+	&:hover,
+	&:focus {
+		&::before {
+			transform: scaleX(1);
+			transform-origin: bottom left;
+		}
+	}
+	&--hollow {
+		color: $white;
+		border: 1px solid transparentize($white, 0.5);
+		&::before {
+			background: transparentize($white, 0.5);
+		}
+		&:hover,
+		&:focus {
+			&::before {
+			}
+		}
+	}
+	&--toggle {
+		background: transparent;
+		border: 0 solid transparent;
+		border-radius: 0;
+		transition: transform 0.3s ease;
+		&:before {
+			transform-origin: bottom left;
+		}
+
+		&.toggled {
+			transform: rotateY(180deg) rotateZ(180deg);
+			// &::before {
+			// 	transform-origin: bottom left;
+			// }
+		}
+
+		@include breakpoint($mobile) {
+			display: none;
+		}
+	}
+}

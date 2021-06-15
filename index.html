@@ -3,38 +3,47 @@
   <head>
     <title>iBec Test Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="./assets/css/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700i" rel="stylesheet">
   </head>
   <body>
     <div class="container">
 
       <div class="card">
-        
-        <header class="card__header">
-          <h1 class="card__title">Bart Simpson</h1>
-          <h2 class="card__subtitle">4th Grader, Rascal</h2>
-        </header>
-
-        <img class="card__img" src="img/Bart_Simpson.jpg" />
-
-        <div class="card__content">
-          
-          <p>Matt Groening first conceived of Bart and the rest of the Simpson family in 1986, while waiting in the lobby of producer James L. Brooks' office.</p>
-
-          <p><strong><em>“I think I read somewhere that cows like being killed.”</em></strong></p>
+        <div class="card__img">
+          <img src="./assets/img/Bart_Simpson.jpg" />
         </div>
 
-        <footer class="card__footer">
+        <div class="card__container">
+          <header class="card__header">
+            <h1 class="card__title">Anthony Marvin</h1>
+            <h2 class="card__subtitle">Web Developer, Recovering Theater Kid</h2>
+          </header>
 
-          <a href="">Call</a>
-          <a href="">Email</a>
-          <a href="">Download Bart's Resumé</a>
 
-        </footer>
-        <img src="svg/arrow.svg" />
+
+          <div class="card__content">
+
+            <p>Anthony is a developer, a theater nerd, and community organizer</p>
+
+            <p><strong><em>“I think I read somewhere that cows like being killed.”</em></strong></p>
+
+            <footer class="card__footer">
+
+              <a href="tel:2077109304" class="btn btn--hollow">Call</a>
+              <a href="mailto:anthonyjmarvin@gmail.com" class="btn btn--hollow">Email</a>
+              <a href="https://docs.google.com/document/d/1f5JH2r6NOosoo7CKPwDSV5wBYgiYIIc_SXVbI1t1nfc/edit?usp=sharing" class="btn btn--hollow">Download Anthony's Resumé</a>
+
+            </footer>
+          </div>
+
+
+        </div>
+
+        <button data-toggle data-target=".card__content" class="btn btn--toggle"><img src="./assets/svg/arrow.svg" /></button>
        <!-- End .card -->
 
     </div> <!-- End .container -->
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

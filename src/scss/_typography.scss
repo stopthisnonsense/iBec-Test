@@ -1,0 +1,40 @@
+@font-face {
+	font-family: 'Museo-700';
+	src: url('../fonts/38FA35_0_0.eot');
+	src: url('../fonts/38FA35_0_0.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/38FA35_0_0.woff2') format('woff2'),
+		url('../fonts/38FA35_0_0.woff') format('woff'),
+		url('../fonts/38FA35_0_0.ttf') format('truetype');
+}
+
+* {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2 {
+	font-family: 'Museo-700';
+	line-height: 1.2;
+	font-weight: 400;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+h2 {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	font-size: 1rem;
+	color: $secondary;
+}
+
+p {
+	line-height: 1.5;
+	margin-top: 0;
+}
+
+strong {
+	font-weight: 700;
+}

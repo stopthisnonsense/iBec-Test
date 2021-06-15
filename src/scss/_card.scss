@@ -1,0 +1,84 @@
+.card {
+	background: $blue;
+	color: $white;
+	display: flex;
+	flex-direction: column;
+	border-radius: 2rem;
+	overflow: hidden;
+	align-items: center;
+	padding: 3rem;
+	padding-bottom: 0;
+	justify-content: space-between;
+	gap: 2.5rem;
+	max-width: 320px;
+	margin: 0;
+	@include breakpoint($mobile) {
+		flex-direction: row;
+		gap: 5rem;
+		max-width: 100%;
+		padding: 2rem;
+		margin: 2rem;
+	}
+}
+
+.card__container {
+	display: flex;
+	flex-direction: column;
+}
+
+.card__img {
+	flex: 1 1 auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	> img {
+		border-radius: 50%;
+		max-width: 200px;
+	}
+	&::before {
+		content: url('../svg/rings.svg');
+		display: block;
+		inset: -160px -160px;
+		// z-index: -1;
+		position: absolute;
+	}
+}
+
+.card__header {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 50%;
+	text-align: center;
+	@include breakpoint($mobile) {
+		text-align: left;
+	}
+}
+
+.card__footer {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 0;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+
+	@include breakpoint($mobile) {
+		flex: 1 1 auto;
+		justify-content: flex-start;
+	}
+}
+
+.card__content {
+	overflow: hidden;
+	transition: all 0.3s ease-out;
+	max-height: 0px;
+	&.active {
+		flex: 1 1 auto;
+		max-height: 1000px;
+	}
+	@include breakpoint($mobile) {
+		max-height: 100%;
+	}
+}

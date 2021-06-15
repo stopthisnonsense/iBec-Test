@@ -1,5 +1,5 @@
 {
-  "name": "iBec-Test",
+  "name": "iBecTest",
   "private": "false",
   "dependencies": {
     "@babel/core": "^7.4.5",

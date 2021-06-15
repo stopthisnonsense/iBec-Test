@@ -25,15 +25,15 @@ const config = {
 	js: {
 		dest: './assets/js',
 		vendor: {
-			paths: [''],
+			paths: [],
 			filename: 'vendor.bundle.js',
 		},
 		commons: {
-			modules: ['bootstrap'],
+			modules: [],
 			filename: 'commons.bundle.js',
 		},
 		bundle: {
-			entries: './src/js/bundle.js',
+			entries: './src/js/script.js',
 			filename: 'bundle.js',
 		},
 	},
@@ -114,7 +114,7 @@ async function jsBundle() {
 	}
 
 	b.bundle()
-		.pipe(source('bundle.js'))
+		.pipe(source('script.js'))
 		.pipe(buffer())
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(uglify())
@@ -188,7 +188,7 @@ function server() {
 		browserSync
 			.watch([
 				'assets/css/theme.css',
-				'assets/js/bundle.js',
+				'assets/**/*.js',
 				'**/*.php',
 				'**/*.html',
 			])

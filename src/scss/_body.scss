@@ -1,0 +1,13 @@
+html {
+	overflow-x: hidden;
+}
+body {
+	display: grid;
+	margin: 0;
+	place-items: center;
+	gap: 0;
+}
+
+img {
+	max-width: 100%;
+}
