@@ -2,10 +2,15 @@ html {
 	overflow-x: hidden;
 }
 body {
-	display: grid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: 0;
-	place-items: center;
-	gap: 0;
+	@supports (display: grid) {
+		display: grid;
+		place-items: center;
+		gap: 0;
+	}
 }
 
 img {

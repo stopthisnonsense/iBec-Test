@@ -39,11 +39,11 @@
 		&::before {
 			background: transparentize($white, 0.5);
 		}
-		&:hover,
-		&:focus {
-			&::before {
-			}
-		}
+		// &:hover,
+		// &:focus {
+		// 	&::before {
+		// 	}
+		// }
 	}
 	&--toggle {
 		background: transparent;
